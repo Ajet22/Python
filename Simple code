@@ -13,3 +13,18 @@ def triange(base,height):
 
 
 #Fibbinocci series in while loop
+def fib(length):
+  a,b,count=0,1,0
+  while(count<length):
+    print(a, end(', '))
+    count+=1
+    a,b=b,a+b
+  print('....')
+
+#Fibbinocci series in for loop
+def fib(length):
+  a,b=0,1
+  for i in range(length):
+    print(a, end(', ')
+    a,b=b,a+b
+  print('...')
