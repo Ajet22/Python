@@ -11,3 +11,5 @@ def m_m(s):
 def triange(base,height):
     return int(base*height*0.5)
 
+
+#Fibbinocci series in while loop
