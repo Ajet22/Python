@@ -4,4 +4,3 @@ def m_m(s):
   mean=sum(s)/len(s)
   median=sorted(s)[int(len(s)/2)]
   print(f"mean of the input is {mean} & median is {median}")
-
