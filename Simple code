@@ -28,3 +28,11 @@ def fib(length):
     print(a, end(', ')
     a,b=b,a+b
   print('...')
+
+
+#To find the next perfect square of number given 
+import math
+def next_perfect_square(num):
+    return (int(math.sqrt(num))+1)**2 if math.sqrt(num)%1==0 else "Number itself is not a perfect square"
+next_perfect_square(100)
+
