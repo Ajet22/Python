@@ -36,3 +36,12 @@ def next_perfect_square(num):
     return (int(math.sqrt(num))+1)**2 if math.sqrt(num)%1==0 else "Number itself is not a perfect square"
 next_perfect_square(100)
 
+#To remove vowels from the string 
+#call the function as remove_vowels('some random words')
+def remove_vowels(string):
+    s=''
+    for letter in string:
+        if letter not in ['a','e','i','o','u']:
+            s+=letter
+    return s
+
