@@ -1,6 +1,13 @@
-Code for finding mean and median
+#Code for finding mean and median
 #provide the input as m_m([1,2,3,4])
 def m_m(s):
   mean=sum(s)/len(s)
   median=sorted(s)[int(len(s)/2)]
   print(f"mean of the input is {mean} & median is {median}")
+
+
+#Area of triange
+#provide the input as triange(4,5)
+def triange(base,height):
+    return int(base*height*0.5)
+
