@@ -1,0 +1,11 @@
+
+def menu():
+    choice=int(input('Welcome to our travels. Thanks for calling. Please select the options below menu\n1.Home\n2.Booking\n3.Enquiry\n4.Compliants\n5. Exit\n'))
+    switcher={
+        1:'Home',
+        2:'Booking',
+        3:'Enquiry',
+        4:'Compliants',
+        5:'Exit'
+    }
+    return 'Taking you to '+switcher.get(choice,'Please enter valid number')
