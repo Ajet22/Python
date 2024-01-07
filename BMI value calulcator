@@ -1,0 +1,6 @@
+def bmi_cal(w,h):
+    results(w/(h/100)**2)
+def results(bmi):
+    result="Underweight" if bmi<18.5 else "Normal Weight" if bmi>=18.5 and bmi<=24.9 else "Overweight" if bmi>=25 and bmi<=29.9 else "Obese"
+    print("Your BMI is "+str(round(bmi))+"; this is considered as "+str(result))
+#provide the input as bmi_cal(weight value,height in cms value)
