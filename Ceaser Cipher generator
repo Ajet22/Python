@@ -1,0 +1,61 @@
+print( "\n\t\tWelcome to Ceaser Cipher Generator\t\t\n")
+
+print('''
+                       _                              _           
+                      | |                            | |          
+  ___ _ __ _   _ _ __ | |_ ___   __ _ _ __ __ _ _ __ | |__  _   _ 
+ / __| '__| | | | '_ \| __/ _ \ / _` | '__/ _` | '_ \| '_ \| | | |
+| (__| |  | |_| | |_) | || (_) | (_| | | | (_| | |_) | | | | |_| |
+ \___|_|   \__, | .__/ \__\___/ \__, |_|  \__,_| .__/|_| |_|\__, |
+            __/ | |              __/ |         | |           __/ |
+           |___/|_|             |___/          |_|          |___/ 
+''')
+
+def encrypt(text, s):
+  a=""
+  for i in range(len(text)):
+    l=ord(text[i])
+    if l>=65 and l<=90:
+      a+=chr((l+s-65)%26+65)
+    elif l>=97 and l<=122:
+      a+=chr((l+s-97)%26+97)
+    else:
+      a+=text[i]
+  print(a)  
+
+def decrypt(text,s):
+  a=""
+  for i in range(len(text)):
+    l = ord(text[i])
+    if l>=65 and l<=90:
+      a+=chr((l-s-65)%26+65)
+    elif l>=97 and l<=122:
+      a+=chr((l-s-97)%26+97)
+    else:
+      a+=text[i]
+  print(a)
+
+wh = input("\n What operation you want to perform? \n 1. Encode \n 2. Decode\n")
+def enc_dec(what):
+  if what == "1":
+    user_input = input("\nPlease enter the text you want to Encode:\n")
+    length = int(input("\nPlease enter the length of the shift:\n"))
+    encrypt(user_input, length)
+  elif what == "2":
+    user_input_2=input("\nPlease enter the text to Decode:\n")
+    length_2 = int(input("\nPlease enter the length of the characters to move:\n"))
+    decrypt(user_input_2, length_2)
+  else:
+    print("Please enter a valid input")
+  statement = input("\nPlease enter yes to continue or enter no to exit\n").lower()
+  if statement!="yes" and statement!="no":
+    print("\nPlease enter yes or no")
+  elif statement=="yes":
+    enc_dec(input("\n What operation you want to perform? \n 1. Encode \n 2. Decode\n"))
+  else:
+    print("\n Thank you for using the Ceaser Cipher Generator")
+  
+
+enc_dec(wh)
+
+
