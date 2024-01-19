@@ -21,7 +21,7 @@ def encrypt(text, s):
       a+=chr((l+s-97)%26+97)
     else:
       a+=text[i]
-  print(a)  
+  print(f"The Encrypted text is : \n{a}")  
 
 def decrypt(text,s):
   a=""
@@ -33,7 +33,7 @@ def decrypt(text,s):
       a+=chr((l-s-97)%26+97)
     else:
       a+=text[i]
-  print(a)
+  print(f"The Decrypted text is : \n{a}")
 
 wh = input("\n What operation you want to perform? \n 1. Encode \n 2. Decode\n")
 def enc_dec(what):
