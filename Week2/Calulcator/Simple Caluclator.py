@@ -1,4 +1,3 @@
-from replit import clear
 from art import logo
 def add(n1,n2):
   return n1+n2
@@ -36,7 +35,6 @@ def caluclator():
         num1 = answer
       elif uservalue=="n":
         value = False
-        clear()
         caluclator()
       else:
         print("Please enter valid input \n")
