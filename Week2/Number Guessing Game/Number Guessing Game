@@ -1,6 +1,5 @@
 print("\nWelcome to Number Guessing Game\n")
 import random
-from replit import clear
 def game_on():
 
   print("\nI'm Thinking of a number between 1 and 100\n")
@@ -39,5 +38,4 @@ def game_on():
 
 
 while(input("Do you want to play a Number Guessing Game, Type \"Y\" or \"N\" : ")).lower() == "y":
-  clear()
   game_on()
