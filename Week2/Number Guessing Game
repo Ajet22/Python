@@ -1,0 +1,43 @@
+print("\nWelcome to Number Guessing Game\n")
+import random
+from replit import clear
+def game_on():
+
+  print("\nI'm Thinking of a number between 1 and 100\n")
+
+  number = random.randint(1,100)
+
+  difficulty = input("Choose Difficulty level, Easy or Hard : ").lower()
+  life = 0
+  if difficulty == "easy":
+    life = 10
+  elif difficulty == "hard":
+    life = 5
+  else:
+    print("Please select correct difficulty level")
+
+  def compare_check(guess, answer):
+    if guess > answer:
+      print("Too High")
+      return life-1
+    elif guess < answer:
+      print("Too Low")
+      return life-1
+    else:
+      print("You Got it right")
+      return 0
+
+  while life!=0:
+    print(f"You have {life} attempts to guess the number \n")
+    guess = int(input("Make a guess : "))
+    life = compare_check(guess, number)
+    if life == 0:
+      print("\nYou run out of lifes\n")
+    else:
+      life = life
+
+
+
+while(input("Do you want to play a Number Guessing Game, Type \"Y\" or \"N\" : ")).lower() == "y":
+  clear()
+  game_on()
